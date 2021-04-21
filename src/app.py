@@ -30,8 +30,9 @@ def init():
                 print("renderiza funcao 1")
                 pass
             elif menu_option is 2:
-                print("renderiza funcao 2")
-                pass
+                from src.views.vehicles.new import run as vehicles_new
+
+                vehicles_new()
             elif menu_option is 3:
                 logout()
 

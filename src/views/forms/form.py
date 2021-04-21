@@ -3,6 +3,7 @@ from PyInquirer import style_from_dict, Token, prompt, Separator
 
 class FormBase:
     questions = []
+
     style = style_from_dict({
         Token.Separator: '#cc5454',
         Token.QuestionMark: '#673ab7 bold',
