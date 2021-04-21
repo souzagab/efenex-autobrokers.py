@@ -1,5 +1,5 @@
 from src.controllers.sessions import sign_in
-
+from src.views.forms.user_form import UserForm
 
 def run():
     return login_prompt()
@@ -8,12 +8,14 @@ def run():
 def login_prompt():
     print("======================")
     print("Logue-se")
-    print("======================")
-    username = input("Username: ")
-    password = input("Password: ")
-    print("======================")
+    print("======================\n")
 
-    response = sign_in(username, password)
+    user = UserForm()
+    params = user.render()
+
+    # print("======================")
+
+    response = sign_in(params)
 
     if response["status"] == 200:
         print(response["message"]) # "alert"

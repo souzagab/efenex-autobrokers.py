@@ -3,13 +3,13 @@
 from src.models.user import User
 import src.middleware.auth as auth
 
-def sign_in(username, pwd):
+def sign_in(params):
     """
        Login
     """
 
     try:
-        result = fetch_user(username, pwd)
+        result = fetch_user(*user_params(params))
 
         if result:
             auth.user = result
@@ -24,11 +24,11 @@ def sign_out():
     """
     auth.user = None
 
-def sign_up(usr, pwd):
+def sign_up(params):
     """
        Registro
     """
-    user = User(username= usr, password = pwd)
+    user = User(**params)
 
     if user.save():
         auth.user = user
@@ -44,3 +44,6 @@ def fetch_user(username, password) -> object:
     :returns: User
     """
     return User.select().where(User.username == username and User.password == password).get()
+
+def user_params(params):
+    return params["username"], params["password"]

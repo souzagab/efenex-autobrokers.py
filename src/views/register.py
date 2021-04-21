@@ -1,5 +1,5 @@
 from src.controllers.sessions import sign_up
-
+from src.views.forms.user_form import UserForm
 def run():
     return sign_up_prompt()
 
@@ -7,12 +7,12 @@ def sign_up_prompt():
     print("======================")
     print(" Registre-se ")
     print("======================")
-    username = input("Username: ")
-    password = input("Password: ")
+    user_form = UserForm()
+    params = user_form.render()
     print("======================")
 
     try:
-        response = sign_up(username, password)
+        response = sign_up(params)
 
         if response["status"] == 201:
             print("Logado") # redirect

@@ -4,10 +4,12 @@
 """
 from src.middleware.auth import user_logged_in
 from src.views import login, register
+from src.views.helpers.utils import logo_text
 
 def init():
     try:
-        print("Bem vindo a Efenex Autobrokers\n")
+        print(logo_text("Efenex AutoBrokers"))
+        print("\n")
 
         while not user_logged_in():
             user_register_input = input("Para continuar, é necessário login, já possui cadastro? (Sim/Não): ")
