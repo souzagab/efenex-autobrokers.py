@@ -4,3 +4,7 @@ user = None
 
 def user_logged_in():
     return user is not None
+
+def logout():
+    global user
+    user = None
