@@ -8,9 +8,9 @@ def menu():
     form = MenuForm()
 
     print("============================")
+    # print(f"|     {user.username}     |")
     print("============================")
     choice = form.render()
-    print("============================")
-    print("============================")
+
 
     return int(list(choice["option"])[0])

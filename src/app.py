@@ -2,7 +2,7 @@
   'App'
   Centralizando as camadas de maneira estruturada
 """
-from src.middleware.auth import user_logged_in, logout
+from src.middleware.auth import user, user_logged_in, logout
 from src.lib.utils import *
 from src.views import login, register, menu
 from src.views.helpers.utils import logo_text
@@ -10,8 +10,10 @@ from src.views.helpers.utils import logo_text
 def init():
     try:
         while True:
+
             while not user_logged_in():
                 clear()
+
                 print(logo_text("Efenex AutoBrokers"))
                 print("\n\n")
                 user_register_input = input("Para continuar, é necessário login, já possui cadastro? (Sim/Não): ")
@@ -23,12 +25,15 @@ def init():
                 else:
                     clear()
                     register.run()
+
+
             clear()
             menu_option = menu.run()
 
             if menu_option is 1:
-                print("renderiza funcao 1")
-                pass
+                from src.views.vehicles.index import run as vehicles_index
+
+                vehicles_index()
             elif menu_option is 2:
                 from src.views.vehicles.new import run as vehicles_new
 

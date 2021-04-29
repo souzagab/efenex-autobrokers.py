@@ -1,6 +1,10 @@
 from src.models.vehicle import Vehicle
 import src.middleware.auth as auth
 
+def index():
+    vehicles = Vehicle.select()
+    return vehicles
+
 def create(params):
     vehicle = Vehicle(**params)
 
