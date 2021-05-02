@@ -34,12 +34,26 @@ def init():
                 from src.views.vehicles.index import run as vehicles_index
 
                 vehicles_index()
+
             elif menu_option is 2:
                 from src.views.vehicles.new import run as vehicles_new
 
                 vehicles_new()
+
             elif menu_option is 3:
+                pass
+
+            elif menu_option is 4:
+                from src.controllers.vehicles import export as export_vehicles
+
+                export_vehicles()
+                clear()
+                print("Abra vehicles.txt")
+
+                input("\n Aperte enter pra continuar")
+            elif menu_option is 5:
                 logout()
+                break
 
 
 

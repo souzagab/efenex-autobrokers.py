@@ -10,7 +10,9 @@ class MenuForm(FormBase):
             'choices': [
                 "1. Listar veículos",
                 "2. Cadastrar um novo veículo",
-                "3. Logout"
+                "3. Listar usuários cadastrados",
+                "4. Exportar veiculos",
+                "5. Logout"
             ]
         }
     ]

@@ -18,6 +18,7 @@ def render_index():
     if len(vehicles) > 0:
         for vehicle in vehicles:
             print(vehicle_card(vehicle))
+
     else:
         print("Nao existem veiculos cadastrados")
 
