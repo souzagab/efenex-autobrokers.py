@@ -1,7 +1,7 @@
 # import code; code.interact(local=dict(globals(), **locals()))
 
-import src.bin.setup as setup
-import src.app as app
+import app.app as app
+import bin.setup as setup
 
 ################
 setup.init()

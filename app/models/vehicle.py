@@ -1,6 +1,8 @@
-from src.models.model import BaseModel
-from peewee import * # TODO: otimizar import
-from src.middleware.auth import user
+from peewee import *  # TODO: otimizar import
+
+from app.models.model import BaseModel
+
+
 class Vehicle(BaseModel):
     """ Classe que representa os veiculos """
 

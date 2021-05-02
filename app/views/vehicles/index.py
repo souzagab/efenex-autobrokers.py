@@ -1,5 +1,5 @@
-from src.lib.utils import clear
-from src.controllers.vehicles import index
+from app.controllers.vehicles import index
+from lib.utils import clear
 
 
 def run():

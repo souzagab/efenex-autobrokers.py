@@ -1,5 +1,5 @@
-from src.controllers.sessions import sign_up
-from src.views.forms.user_form import UserForm
+from app.controllers.sessions import sign_up
+from app.views.forms.user_form import UserForm
 def run():
     return sign_up_prompt()
 

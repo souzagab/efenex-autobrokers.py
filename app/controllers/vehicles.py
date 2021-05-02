@@ -1,5 +1,5 @@
-from src.models.vehicle import Vehicle
-import src.middleware.auth as auth
+from app.models.vehicle import Vehicle
+
 
 def index():
     vehicles = Vehicle.select()

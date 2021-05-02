@@ -1,5 +1,4 @@
-from src.middleware.auth import user
-from src.views.forms.menu import MenuForm
+from app.views.forms.menu import MenuForm
 
 def run():
     return menu()

@@ -1,6 +1,6 @@
-from src.controllers.sessions import sign_in
-from src.views.forms.user_form import UserForm
-from src.lib.utils import clear
+from app.controllers.sessions import sign_in
+from app.views.forms.user_form import UserForm
+from lib.utils import clear
 
 def run():
     return login_prompt()
@@ -37,5 +37,5 @@ def login_prompt():
 
 
 def redirect_to_sign_up():
-    from src.views.register import run
+    from app.views.register import run
     return run()

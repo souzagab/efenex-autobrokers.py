@@ -1,4 +1,4 @@
-from src.views.forms.form import FormBase
+from app.views.forms.form import FormBase
 
 
 class UserForm(FormBase):

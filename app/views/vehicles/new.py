@@ -1,6 +1,8 @@
 
-from src.views.forms.vehicle import VehicleForm
-from src.controllers.vehicles import *
+from app.controllers.vehicles import *
+from app.views.forms.vehicle import VehicleForm
+
+
 def run():
     return vehicle_form()
 

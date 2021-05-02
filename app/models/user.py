@@ -1,6 +1,6 @@
 from peewee import *
 
-from src.models.model import BaseModel
+from app.models.model import BaseModel
 
 
 class User(BaseModel):

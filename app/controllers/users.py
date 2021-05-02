@@ -1,4 +1,4 @@
-from src.models.user import User
+from app.models.user import User
 
 def index():
     users = User.select()

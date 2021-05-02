@@ -1,7 +1,8 @@
 
 
-from src.models.user import User
-import src.middleware.auth as auth
+import app.middleware.auth as auth
+from app.models.user import User
+
 
 def sign_in(params):
     """

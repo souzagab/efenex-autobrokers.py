@@ -2,10 +2,11 @@
   'App'
   Centralizando as camadas de maneira estruturada
 """
-from src.middleware.auth import user, user_logged_in, logout
-from src.lib.utils import *
-from src.views import login, register, menu
-from src.views.helpers.utils import logo_text
+from app.middleware.auth import user_logged_in, logout
+from app.views import login, register, menu
+from app.views.helpers.utils import logo_text
+from lib.utils import *
+
 
 def init():
     try:
@@ -31,23 +32,32 @@ def init():
             menu_option = menu.run()
 
             if menu_option is 1:
-                from src.views.vehicles.index import run as vehicles_index
+                clear()
+
+                from app.views.vehicles.index import run as vehicles_index
 
                 vehicles_index()
 
             elif menu_option is 2:
-                from src.views.vehicles.new import run as vehicles_new
+                clear()
+
+                from app.views.vehicles.new import run as vehicles_new
 
                 vehicles_new()
 
             elif menu_option is 3:
-                pass
+                clear()
+                from app.views.users.index import run as users_index
+
+                users_index()
 
             elif menu_option is 4:
-                from src.controllers.vehicles import export as export_vehicles
+                clear()
+
+                from app.controllers.vehicles import export as export_vehicles
 
                 export_vehicles()
-                clear()
+
                 print("Abra vehicles.txt")
 
                 input("\n Aperte enter pra continuar")

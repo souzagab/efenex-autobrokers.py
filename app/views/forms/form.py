@@ -1,4 +1,4 @@
-from PyInquirer import style_from_dict, Token, prompt, Separator
+from PyInquirer import style_from_dict, Token, prompt
 
 
 class FormBase:
